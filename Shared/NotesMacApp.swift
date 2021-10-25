@@ -13,5 +13,12 @@ struct NotesMacApp: App {
         WindowGroup {
             ContentView()
         }
+        
+        //this app is for macos 11 12 and ios 14 15
+        /// using xcode 13
+        /// hidding title bar
+        #if os(macOS)
+        .windowStyle(HiddenTitleBarWindowStyle())
+        #endif
     }
 }
